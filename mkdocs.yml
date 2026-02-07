@@ -2,3 +2,8 @@ site_name: My Docs
 docs_dir: src
 site_dir: docs
 
+nav:
+  - Главная: index.md
+  - Обо мне: about.md
+  - Проекты: projects.md
+

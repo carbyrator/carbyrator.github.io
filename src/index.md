@@ -1,17 +1,27 @@
-# Welcome to MkDocs
+<h1>Иван Шанин</h1>
+<p><strong>Python-разработчик</strong>. Пишу код, который иногда даже работает с первого раза.</p>
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<hr>
 
-## Commands
+<h2>Навигация</h2>
+<ul>
+  <li><a href="about/">Обо мне</a></li>
+  <li><a href="projects/">Проекты</a></li>
+</ul>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+<hr>
 
-## Project layout
+<h2>Контакты</h2>
+<ul>
+  <li>Email: <a href="mailto:ivan.shanin@example.com">ivan.shanin@example.com</a></li>
+  <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a></li>
+</ul>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<p style="margin-top: 24px; color: #666;">
+  © <span id="year"></span> Иван Шанин
+</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+

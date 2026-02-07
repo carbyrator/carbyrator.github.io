@@ -4,27 +4,27 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Обо мне - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
+                <a class="navbar-brand" href="..">My Docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,13 +35,13 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="." class="nav-link active" aria-current="page">Главная</a>
+                                <a href=".." class="nav-link">Главная</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about/" class="nav-link">Обо мне</a>
+                                <a href="./" class="nav-link active" aria-current="page">Обо мне</a>
                             </li>
                             <li class="nav-item">
-                                <a href="projects/" class="nav-link">Проекты</a>
+                                <a href="../projects/" class="nav-link">Проекты</a>
                             </li>
                         </ul>
 
@@ -52,12 +52,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="about/" class="nav-link">
+                                <a rel="next" href="../projects/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -83,32 +83,26 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1>Иван Шанин</h1>
-<p><strong>Python-разработчик</strong>. Пишу код, который иногда даже работает с первого раза.</p>
+<h1>Обо мне</h1>
 
-<hr>
+<p>Меня зовут <strong>Иван Шанин</strong>. Я программирую на <strong>Python</strong> и люблю, когда всё понятно, быстро и без лишнего цирка.</p>
 
-<h2>Навигация</h2>
+<h2>Навыки</h2>
 <ul>
-  <li><a href="about/">Обо мне</a></li>
-  <li><a href="projects/">Проекты</a></li>
+  <li>Python: основы/ООП/скрипты/автоматизация</li>
+  <li>Работа с API (requests), парсинг данных</li>
+  <li>Базы данных: SQLite (и вообще дружу с SQL)</li>
+  <li>Git и базовая командная строка</li>
 </ul>
 
-<hr>
-
-<h2>Контакты</h2>
+<h2>Чем интересуюсь</h2>
 <ul>
-  <li>Email: <a href="mailto:ivan.shanin@example.com">ivan.shanin@example.com</a></li>
-  <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a></li>
+  <li>Автоматизация рутины (потому что рутина заслужила страдать)</li>
+  <li>Небольшие полезные утилиты</li>
+  <li>Учебные проекты и прокачка навыков</li>
 </ul>
 
-<p style="margin-top: 24px; color: #666;">
-  © <span id="year"></span> Иван Шанин
-</p>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script></div>
+<p><a href="../">← На главную</a></p></div>
             </div>
         </div>
 
@@ -116,13 +110,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -187,8 +181,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2026-02-07 10:32:44.241280+00:00
--->
