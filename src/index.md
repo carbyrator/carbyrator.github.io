@@ -1,5 +1,5 @@
 <h1>Иван Шанин</h1>
-<p><strong>Python-разработчик</strong>. Пишу код, который иногда даже работает с первого раза.</p>
+<p><strong>Начинающий разработчик на Python</strong>. Пишу код, который иногда даже работает с первого раза.</p>
 
 <hr>
 
@@ -13,8 +13,8 @@
 
 <h2>Контакты</h2>
 <ul>
-  <li>Email: <a href="mailto:ivan.shanin@example.com">ivan.shanin@example.com</a></li>
-  <li>GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a></li>
+  <li>Email: <a href="mailto:ivan.shanin.07@mail.ru">ivan.shanin.07@mail.ru</a></li>
+  <li>GitHub: <a href="https://github.com/carbyrator" target="_blank" rel="noopener">github.com/carbyrator</a></li>
 </ul>
 
 <p style="margin-top: 24px; color: #666;">
