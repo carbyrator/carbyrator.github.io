@@ -1,0 +1,12 @@
+/* Убираем левый сайдбар (включая "мертвую" строку поиска) */
+.bs-sidebar,
+.col-md-3 {
+  display: none !important;
+}
+
+/* Растягиваем контент на всю ширину */
+.col-md-9 {
+  width: 100% !important;
+  float: none !important;
+}
+
