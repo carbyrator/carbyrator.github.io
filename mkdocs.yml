@@ -7,3 +7,5 @@ nav:
   - Обо мне: about.md
   - Проекты: projects.md
 
+plugins: []
+
