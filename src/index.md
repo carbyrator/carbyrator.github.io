@@ -17,6 +17,8 @@
   <li>GitHub: <a href="https://github.com/carbyrator" target="_blank" rel="noopener">github.com/carbyrator</a></li>
 </ul>
 
+![Жирный кот с лазерными глазами](assets/fat-cat-laser-eyes.gif)
+
 <p style="margin-top: 24px; color: #666;">
   © <span id="year"></span> Иван Шанин
 </p>
