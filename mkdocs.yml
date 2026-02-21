@@ -3,7 +3,7 @@ site_name: My Docs
 site_dir: docs"""
 
 theme:
-  name: 'dracula'
+  name: dracula
 """
 nav:
   - Главная: index.md
