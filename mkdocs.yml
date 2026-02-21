@@ -3,8 +3,7 @@ docs_dir: src
 site_dir: docs
 
 theme:
-  name: null
-  custom_dir: 'dracula'
+  name: 'dracula'
 
 nav:
   - Главная: index.md
