@@ -4,7 +4,7 @@ site_dir: docs
 
 theme:
   name: null
-  custom_dir: 'cinder'
+  custom_dir: 'dracula'
 
 nav:
   - Главная: index.md
