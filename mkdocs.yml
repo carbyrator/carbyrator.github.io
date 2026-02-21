@@ -1,10 +1,10 @@
 site_name: My Docs
-docs_dir: src
-site_dir: docs
+"""docs_dir: src
+site_dir: docs"""
 
 theme:
   name: 'dracula'
-
+"""
 nav:
   - Главная: index.md
   - Обо мне: about.md
@@ -13,5 +13,5 @@ nav:
 plugins: []
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra.css"""
 
