@@ -1,6 +1,7 @@
 site_name: My Docs
-docs_dir: src
-site_dir: docs
+
+docs_dir: docs
+site_dir: ../docs
 
 theme:
   name: dracula
@@ -10,8 +11,8 @@ nav:
   - Обо мне: about.md
   - Проекты: projects.md
 
-plugins: []
+plugins:
+  - search
 
 extra_css:
   - stylesheets/extra.css
-
