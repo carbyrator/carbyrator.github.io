@@ -17,9 +17,6 @@
   <li>GitHub: <a href="https://github.com/carbyrator" target="_blank" rel="noopener">github.com/carbyrator</a></li>
 </ul>
 
-<p align="center">
-  <img src="assets/fat-cat-laser-eyes.gif" width="400">
-</p>
 
 
 <p align="center"; style="margin-top: 24px; color: #666;">
