@@ -4,4 +4,4 @@
   <li>Технологии: Python, sqlite3, MVC, Jinja2, HTML, unittest.mock.</li>
   <li>Ссылка: <a href="https://github.com/carbyrator/Python/tree/main/lab9" target="_blank" rel="noopener">GitHub репозиторий</a></li>
 </ul>
-<p><a href="/">← На главную</a></p>
+[← На главную](../../)
