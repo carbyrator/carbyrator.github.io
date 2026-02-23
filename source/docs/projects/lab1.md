@@ -5,4 +5,4 @@
   <li>Технологии: Python, Flask / Django / FastAPI, SQLite, ORM, HTML, MVC, Git.</li>
   <li>Ссылка: <a href="https://github.com/YannisBtw/task_tracker" target="_blank" rel="noopener">GitHub репозиторий</a></li>
 </ul>
-<p><a href="/index/">← На главную</a></p>
+<p><a href="/">← На главную</a></p>

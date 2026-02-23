@@ -6,5 +6,5 @@
 
 ## [Проект 3. CRUD-приложение с SQLite и MVC](projects/lab3.md)
 
-<p><a href="/index/">← На главную</a></p>
+<p><a href="/">← На главную</a></p>
 
