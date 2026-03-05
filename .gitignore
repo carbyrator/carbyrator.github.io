@@ -8,4 +8,5 @@ site/
 
 # OS junk
 .DS_Store
+.idea
 
