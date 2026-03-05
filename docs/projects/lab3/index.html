@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-bs-theme="">
     <head>
-                <title>Проект 3. CRUD-приложение с SQLite и MVC - My Docs</title>
+                <title>Проект 3. CRUD-приложение с SQLite и MVC - carbyrator</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
         
 
         
-            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">My Docs</span>
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">carbyrator</span>
         
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
@@ -89,6 +89,11 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="./" class="dropdown-item text-decoration-none  active ">Проект 3. CRUD-приложение с SQLite и MVC</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../LR-2/" class="dropdown-item text-decoration-none ">Проект 4. Основы NumPy массивы и векторные операции</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -141,8 +146,42 @@
                 <h1 class=" title" id="component-title">Проект 3. CRUD-приложение с SQLite и MVC</h1>
             
         </header>
-        <p><h2>CRUD-приложение с SQLite и MVC</h2>
-<p>Разработано приложение с сущностями пользователь и валюта. Реализованы CRUD-операции, связи между таблицами через первичные и внешние ключи, маршрутизация запросов и рендеринг HTML-страниц. Приложение построено по архитектуре MVC с разделением моделей, контроллеров и представлений.</p>
+        <p><section class="lab-report">
+  <h3>Цель работы</h3>
+  <ul>
+    <li>Реализовать CRUD (Create, Read, Update, Delete) для сущностей бизнес-логики приложения.</li>
+    <li>Освоить работу с SQLite в памяти (<strong>:memory:</strong>) через модуль <strong>sqlite3</strong>.</li>
+    <li>Понять принципы первичных и внешних ключей и их роль в связях между таблицами.</li>
+    <li>Выделить контроллеры для работы с БД и для рендеринга страниц в отдельные модули.</li>
+    <li>Использовать архитектуру MVC и соблюдать разделение ответственности.</li>
+    <li>Отображать пользователям таблицу с валютами, на которые они подписаны.</li>
+    <li>Реализовать полноценный роутер, который обрабатывает GET-запросы, выполняет сохранение/обновление данных и рендеринг страниц.</li>
+    <li>Научиться тестировать функционал на примере сущностей <strong>currency</strong> и <strong>user</strong> с использованием <strong>unittest.mock</strong>.</li>
+  </ul>
+
+  <h3>Основные задачи</h3>
+  <h4>CRUD для Currency</h4>
+  <ul>
+    <li><strong>Create</strong> — добавление новых валют в базу данных.</li>
+    <li><strong>Read</strong> — вывод валют из базы данных.</li>
+    <li><strong>Update</strong> — обновление значения курса валюты.</li>
+    <li><strong>Delete</strong> — удаление валюты по <strong>id</strong>.</li>
+    <li>Все действия выполняются с использованием параметризованных запросов для защиты от SQL-инъекций.</li>
+  </ul>
+
+  <h4>Работа с SQLite</h4>
+  <ul>
+    <li>Использовать базу в памяти: <strong>sqlite3.connect(':memory:')</strong>.</li>
+    <li>Объяснить назначение <strong>PRIMARY KEY</strong> и <strong>FOREIGN KEY</strong> и их роль в связях таблиц.</li>
+  </ul>
+
+  <h3>Выводы</h3>
+  <p>
+    Разработано приложение с сущностями пользователь и валюта. Реализованы CRUD-операции, связи между таблицами через
+    первичные и внешние ключи, маршрутизация запросов и рендеринг HTML-страниц. Приложение построено по архитектуре MVC
+    с разделением моделей, контроллеров и представлений.
+  </p>
+</section>
 <ul>
   <li>Технологии: Python, sqlite3, MVC, Jinja2, HTML, unittest.mock.</li>
   <li>Ссылка: <a href="https://github.com/carbyrator/Python/tree/main/lab9" target="_blank" rel="noopener">GitHub репозиторий</a></li>
@@ -165,7 +204,7 @@
         </div>
         <div class="col themed-grid-col"></div>
         <div class="col themed-grid-col">
-            <a rel="next" class="nav-link disabled">
+            <a rel="next" href="../LR-2/" class="nav-link">
                 Next <i class="fa fa-arrow-right"></i>
             </a>
         </div>

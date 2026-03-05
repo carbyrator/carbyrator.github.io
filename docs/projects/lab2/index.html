@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-bs-theme="">
     <head>
-                <title>Проект 2. Оптимизация вычислений в Python - My Docs</title>
+                <title>Проект 2. Оптимизация вычислений в Python - carbyrator</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
         
 
         
-            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">My Docs</span>
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">carbyrator</span>
         
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
@@ -89,6 +89,11 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="../lab3/" class="dropdown-item text-decoration-none ">Проект 3. CRUD-приложение с SQLite и MVC</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../LR-2/" class="dropdown-item text-decoration-none ">Проект 4. Основы NumPy массивы и векторные операции</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -141,9 +146,82 @@
                 <h1 class=" title" id="component-title">Проект 2. Оптимизация вычислений в Python</h1>
             
         </header>
-        <p><h2>Оптимизация вычислений в Python</h2>
-<p>Исследованы способы ускорения численного интегрирования методом прямоугольников. Реализованы версии функции с использованием потоков, процессов, Cython и отключения GIL. Выполнено профилирование, сравнительный анализ времени выполнения и тестирование корректности вычислений.
-</p>
+        <p><section class="lab-report">
+  <h3>Цель</h3>
+  <p>
+    Исследовать методы оптимизации вычисления кода, используя <strong>потоки</strong>, <strong>процессы</strong>,
+    <strong>Cython</strong> и <strong>отключение GIL</strong>, на основе сравнения времени выполнения функции численного
+    интегрирования методом прямоугольников, реализованной на чистом Python.
+  </p>
+
+  <h3>Задание</h3>
+  <ol>
+    <li>
+      <strong>Итерация 1: базовая реализация</strong>
+      <ul>
+        <li>Написать полный docstring для функции <strong>integrate()</strong> по стандарту PEP 257.</li>
+        <li>Добавить аннотации типов аргументов и возвращаемого значения по PEP 484.</li>
+        <li>Добавить два примера <strong>doctest</strong> в docstring (тригонометрическая функция и полином 2-й степени).</li>
+        <li>Написать юнит-тесты (unittest/pytest): проверка известного интеграла и устойчивость при изменении <strong>n_iter</strong>.</li>
+        <li>Выполнить замеры производительности через <strong>timeit</strong> для разных значений <strong>n_iter</strong> и зафиксировать результаты.</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Итерация 2: оптимизация потоками</strong>
+      <ul>
+        <li>Реализовать параллельное вычисление интеграла с использованием <strong>ThreadPoolExecutor</strong>.</li>
+        <li>Аннотировать аргументы и возвращаемое значение функции асинхронного интегрирования.</li>
+        <li>Оценить время выполнения при разном числе потоков (<strong>n_jobs</strong>: 2, 4, 6, 8).</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Итерация 3: оптимизация процессами</strong>
+      <ul>
+        <li>Реализовать аналогичную функцию, использующую <strong>ProcessPoolExecutor</strong>.</li>
+        <li>Сравнить производительность потоков и процессов при одинаковых параметрах (<strong>n_jobs</strong>: 2, 4, 6, 8).</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Итерация 4: профилирование и оптимизация Cython</strong>
+      <ul>
+        <li>Выполнить профилирование и оптимизировать функцию <strong>integrate</strong> с помощью Cython.</li>
+        <li>Сделать замеры времени для последовательной версии (без потоков/процессов) и сравнить с итерацией 1.</li>
+        <li>Сделать замеры времени версий с потоками и процессами и сравнить с итерациями 2 и 3.</li>
+        <li>Использовать <strong>annotate=True</strong>, получить HTML-аннотацию и оптимизировать код для уменьшения взаимодействия с C-API.</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Итерация 5: версия noGIL</strong>
+      <ul>
+        <li>Переписать реализацию интегрирования с использованием <strong>noGIL</strong>.</li>
+        <li>Сделать замеры времени для 2, 4, 6 потоков и сравнить:
+          <ul>
+            <li>поточная версия без GIL (noGIL) vs сайтонизированная версия,</li>
+            <li>процессная версия сайтонизированной реализации.</li>
+          </ul>
+        </li>
+        <li>
+          Оценить необходимость и смысл примитивов синхронизации (семафор/мьютекс) и объяснить выводы.
+        </li>
+        <li>
+          Дополнительно: исследовать Python 3.14 и оценить, меняются ли результаты замеров из итерации 2
+          (нужно ли отпускать GIL).
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>Выводы</h3>
+  <p>
+    Исследованы способы ускорения численного интегрирования методом прямоугольников. Реализованы версии функции с
+    использованием потоков, процессов, Cython и отключения GIL. Выполнено профилирование, сравнительный анализ времени
+    выполнения и тестирование корректности вычислений.
+  </p>
+</section>
 <ul>
   <li>Технологии: Python, threading, multiprocessing, Cython, timeit, unittest / pytest.</li>
   <li>Ссылка: <a href="https://github.com/carbyrator/Python/tree/main/lab10" target="_blank" rel="noopener">GitHub репозиторий</a></li>
