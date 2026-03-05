@@ -4,7 +4,7 @@ docs_dir: docs
 site_dir: ../docs
 
 theme:
-  name: dracula
+  name: simple-blog
 
 nav:
   - Главная: index.md
