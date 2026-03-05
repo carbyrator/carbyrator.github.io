@@ -1,29 +1,21 @@
-<h1>Иван Шанин</h1>
-<p><strong>Начинающий разработчик на Python</strong>. Пишу код, который иногда даже работает с первого раза.</p>
+# Иван Шанин
 
-<hr>
+**Начинающий разработчик на Python**. Пишу код, который иногда даже работает с первого раза.
 
-<h2>Навигация</h2>
-<ul>
-  <li><a href="about/">Обо мне</a></li>
-  <li><a href="projects/">Лабораторные работы</a></li>
-</ul>
+---
 
-<hr>
+## Навигация
+- [Обо мне](about/)
+- [Лабораторные работы](projects/)
 
-<h2>Контакты</h2>
-<ul>
-  <li>Email: <a href="mailto:ivan.shanin.07@mail.ru">ivan.shanin.07@mail.ru</a></li>
-  <li>GitHub: <a href="https://github.com/carbyrator" target="_blank" rel="noopener">github.com/carbyrator</a></li>
-</ul>
+---
 
+## Контакты
+- Email: [ivan.shanin.07@mail.ru](mailto:ivan.shanin.07@mail.ru)
+- GitHub: [github.com/carbyrator](https://github.com/carbyrator)
 
+---
 
-<p align="center"; style="margin-top: 24px; color: #666;">
-  © <span id="year"></span> Иван Шанин
+<p align="center" style="margin-top: 24px; color: #666;">
+  © 2026 Иван Шанин
 </p>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
