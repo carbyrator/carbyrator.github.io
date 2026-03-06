@@ -5,6 +5,13 @@ site_dir: ../docs
 
 theme:
   name: simple-blog
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
 
 nav:
   - Главная: index.md

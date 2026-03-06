@@ -147,28 +147,40 @@
             
         </header>
         <p><h3 id="_1">Цель</h3>
-<p>Освоить базовые приёмы работы с библиотекой <strong>NumPy</strong> для численных вычислений и анализа данных: создание и преобразование массивов, выполнение векторных и матричных операций, применение функций статистики и нормализации, а также построение графиков для визуализации результатов. Дополнительно закрепить навык разработки через тестирование с использованием <strong>pytest</strong>.</p>
+<p>Освоить базовые приёмы работы с библиотекой <strong>NumPy</strong> для численных вычислений и анализа данных: создание и
+преобразование массивов, выполнение векторных и матричных операций, применение функций статистики и нормализации, а
+также построение графиков для визуализации результатов. Дополнительно закрепить навык разработки через тестирование с
+использованием <strong>pytest</strong>.</p>
 <h3 id="_2">Описание задачи</h3>
-<p>Требовалось реализовать набор функций для работы с массивами и матрицами, а также модуль анализа учебного датасета с оценками студентов. Основная цель — получить корректные вычисления (операции NumPy, статистика, нормализация) и сформировать графики, при этом добиться прохождения всех автотестов.</p>
+<p>Требовалось реализовать набор функций для работы с массивами и матрицами, а также модуль анализа учебного датасета с
+оценками студентов. Основная цель — получить корректные вычисления (операции NumPy, статистика, нормализация) и
+сформировать графики, при этом добиться прохождения всех автотестов.</p>
 <h3 id="_3">Как была решена</h3>
 <ul>
 <li>Функции реализованы на основе стандартных возможностей NumPy: <code>arange</code>, <code>random.rand</code>, <code>reshape</code>, <code>transpose</code>.</li>
-<li>Векторные и матричные операции выполнены в векторизованном виде без циклов: <code>+</code>, <code>*</code>, <code>np.dot</code>, оператор <code>@</code>, функции <code>np.linalg</code>.</li>
-<li>Датасет загружался через <code>pandas.read_csv()</code> с преобразованием в <code>numpy.ndarray</code>, затем вычислялись статистики и выполнялась Min-Max нормализация.</li>
+<li>Векторные и матричные операции выполнены в векторизованном виде без циклов: <code>+</code>, <code>*</code>, <code>np.dot</code>, оператор <code>@</code>, функции
+  <code>np.linalg</code>.</li>
+<li>Датасет загружался через <code>pandas.read_csv()</code> с преобразованием в <code>numpy.ndarray</code>, затем вычислялись статистики и
+  выполнялась Min-Max нормализация.</li>
 <li>Визуализации строились через <code>matplotlib</code>/<code>seaborn</code> и сохранялись в директорию <code>plots/</code>.</li>
 <li>Корректность проверялась тестами <strong>pytest</strong>, что позволило быстро выявлять ошибки в формах массивов и вычислениях.</li>
 </ul>
 <h3 id="_4">Нюансы при решении</h3>
 <ul>
-<li><strong>Форма массивов</strong>: многие функции ожидают одномерный вход, поэтому при чтении данных или тестах важно использовать <code>flatten()</code> при <code>ndim &gt; 1</code>.</li>
-<li><strong>Точность вычислений</strong>: для обратной матрицы и решения СЛАУ корректнее использовать проверки типа <code>np.allclose</code>, так как есть погрешности float.</li>
+<li><strong>Форма массивов</strong>: многие функции ожидают одномерный вход, поэтому при чтении данных или тестах важно использовать
+  <code>flatten()</code> при <code>ndim &gt; 1</code>.</li>
+<li><strong>Точность вычислений</strong>: для обратной матрицы и решения СЛАУ корректнее использовать проверки типа <code>np.allclose</code>, так
+  как есть погрешности float.</li>
 <li><strong>Нормализация</strong>: при Min-Max важно корректно обрабатывать диапазон <code>(max - min)</code> и не смешивать типы данных.</li>
-<li><strong>Сохранение графиков</strong>: нужно явно закрывать фигуры (<code>plt.close()</code>), чтобы не копить объекты и не ломать последовательные тесты/запуски.</li>
-<li><strong>Пути к файлам</strong>: лучше сохранять графики в относительные пути внутри проекта (<code>plots/</code>), чтобы код переносился между машинами.</li>
+<li><strong>Сохранение графиков</strong>: нужно явно закрывать фигуры (<code>plt.close()</code>), чтобы не копить объекты и не ломать
+  последовательные тесты/запуски.</li>
+<li><strong>Пути к файлам</strong>: лучше сохранять графики в относительные пути внутри проекта (<code>plots/</code>), чтобы код переносился между
+  машинами.</li>
 </ul>
 <h3 id="_5">Задание</h3>
 <ol>
-<li>Подготовить окружение и структуру проекта, установить зависимости (<code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>pytest</code>).</li>
+<li>Подготовить окружение и структуру проекта, установить зависимости (<code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>seaborn</code>,
+   <code>pytest</code>).</li>
 <li>Реализовать функции для работы с массивами (создание, <code>reshape</code>, <code>transpose</code>).</li>
 <li>Реализовать векторные операции без циклов (сложение, умножение, поэлементное умножение, <code>dot-product</code>).</li>
 <li>Реализовать матричные вычисления (умножение, <code>det</code>, <code>inv</code>, решение <code>Ax=b</code>).</li>
@@ -176,8 +188,319 @@
 <li>Построить и сохранить визуализации (гистограмма, heatmap корреляций, линейный график).</li>
 <li>Добиться прохождения всех тестов с <strong>pytest</strong>.</li>
 </ol>
-<h3 id="_6">Выводы</h3>
-<p>В ходе лабораторной работы были реализованы функции для выполнения численных вычислений и анализа данных с использованием <strong>NumPy</strong>. Освоены операции создания, преобразования и обработки массивов, векторные и матричные вычисления, статистический анализ и нормализация данных. Реализованы визуализации с сохранением результатов в <code>plots/</code>. Корректность функций подтверждена прохождением тестов <strong>pytest</strong>.</p>
+<h3 id="_6">Код лабораторной работы:</h3>
+<pre><code class="language-python">import os
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+def create_vector() -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Создать массив от 0 до 9.
+
+    Returns:
+        numpy.ndarray: Массив чисел от 0 до 9 включительно
+    &quot;&quot;&quot;
+
+    return np.arange(0, 10, 1)
+
+
+def create_matrix() -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Создать матрицу 5x5 со случайными числами [0,1].
+
+    Returns:
+        numpy.ndarray: Матрица 5x5 со случайными значениями от 0 до 1
+    &quot;&quot;&quot;
+
+    return np.random.rand(5, 5)
+
+
+def reshape_vector(vec) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Преобразовать (10,) -&gt; (2,5)
+
+    Args:
+        vec (numpy.ndarray): Входной массив формы (10,)
+
+    Returns:
+        numpy.ndarray: Преобразованный массив формы (2, 5)
+    &quot;&quot;&quot;
+    return vec.reshape(2, 5)
+
+
+def transpose_matrix(mat) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Транспонирование матрицы.
+
+    Args:
+        mat (numpy.ndarray): Входная матрица
+
+    Returns:
+        numpy.ndarray: Транспонированная матрица
+    &quot;&quot;&quot;
+    return mat.T
+
+
+# ============================================================
+# 2. ВЕКТОРНЫЕ ОПЕРАЦИИ
+# ============================================================
+
+def vector_add(a, b) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Сложение векторов одинаковой длины.
+
+    Args:
+        a (numpy.ndarray): Первый вектор
+        b (numpy.ndarray): Второй вектор
+
+    Returns:
+        numpy.ndarray: Результат поэлементного сложения
+    &quot;&quot;&quot;
+
+    return a + b
+
+
+def scalar_multiply(vec, scalar) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Умножение вектора на число.
+
+    Args:
+        vec (numpy.ndarray): Входной вектор
+        scalar (float/int): Число для умножения
+
+    Returns:
+        numpy.ndarray: Результат умножения вектора на скаляр
+    &quot;&quot;&quot;
+
+    return vec * scalar
+
+
+def elementwise_multiply(a, b) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Поэлементное умножение.
+
+    Args:
+        a (numpy.ndarray): Первый вектор/матрица
+        b (numpy.ndarray): Второй вектор/матрица
+
+    Returns:
+        numpy.ndarray: Результат поэлементного умножения
+    &quot;&quot;&quot;
+
+    return a * b
+
+
+def dot_product(a, b) -&gt; float:
+    &quot;&quot;&quot;
+    Скалярное произведение.
+
+    Args:
+        a (numpy.ndarray): Первый вектор
+        b (numpy.ndarray): Второй вектор
+
+    Returns:
+        float: Скалярное произведение векторов
+    &quot;&quot;&quot;
+
+    return np.dot(a, b)
+
+
+# ============================================================
+# 3. МАТРИЧНЫЕ ОПЕРАЦИИ
+# ============================================================
+
+def matrix_multiply(a, b) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Умножение матриц.
+
+    Args:
+        a (numpy.ndarray): Первая матрица
+        b (numpy.ndarray): Вторая матрица
+
+    Returns:
+        numpy.ndarray: Результат умножения матриц
+    &quot;&quot;&quot;
+
+    return a @ b
+
+
+def matrix_determinant(a) -&gt; float:
+    &quot;&quot;&quot;
+    Определитель матрицы.
+
+    Args:
+        a (numpy.ndarray): Квадратная матрица
+
+    Returns:
+        float: Определитель матрицы
+    &quot;&quot;&quot;
+
+    return np.linalg.det(a)
+
+
+def matrix_inverse(a) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Обратная матрица.
+
+    Args:
+        a (numpy.ndarray): Квадратная матрица
+
+    Returns:
+        numpy.ndarray: Обратная матрица
+    &quot;&quot;&quot;
+
+    return np.linalg.inv(a)
+
+
+def solve_linear_system(a, b) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Решить систему Ax = b
+
+    Args:
+        a (numpy.ndarray): Матрица коэффициентов A
+        b (numpy.ndarray): Вектор свободных членов b
+
+    Returns:
+        numpy.ndarray: Решение системы x
+    &quot;&quot;&quot;
+
+    return np.linalg.solve(a, b)
+
+
+# ============================================================
+# 4. СТАТИСТИЧЕСКИЙ АНАЛИЗ
+# ============================================================
+
+def load_dataset(path=&quot;data/students_scores.csv&quot;) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Загрузить CSV и вернуть NumPy массив.
+
+    Args:
+        path (str): Путь к CSV файлу
+
+    Returns:
+        numpy.ndarray: Загруженные данные в виде массива
+    &quot;&quot;&quot;
+    # Подсказка: используйте pd.read_csv(path).to_numpy()
+    return pd.read_csv(path).to_numpy()
+
+
+def statistical_analysis(data) -&gt; dict:
+    &quot;&quot;&quot;
+   Посчитать статистику одномерного массива.
+
+    Args:
+        data (numpy.ndarray): Одномерный массив данных
+
+    Returns:
+        dict: Словарь со статистическими показателями
+    &quot;&quot;&quot;
+
+    return {&quot;mean&quot;: np.mean(data),
+            &quot;median&quot;: np.median(data),
+            &quot;std&quot;: np.std(data),
+            &quot;min&quot;: np.min(data),
+            &quot;max&quot;: np.max(data),
+            &quot;25_percentile&quot;: np.percentile(data, 25),
+            &quot;75_percentile&quot;: np.percentile(data, 75)}
+
+
+data = pd.read_csv(&quot;data/students_scores.csv&quot;).to_numpy()
+
+
+def normalize_data(data) -&gt; np.ndarray:
+    &quot;&quot;&quot;
+    Min-Max нормализация.
+
+    Args:
+        data (numpy.ndarray): Входной массив данных
+
+    Returns:
+        numpy.ndarray: Нормализованный массив данных в диапазоне [0, 1]
+    &quot;&quot;&quot;
+
+    return (data - np.min(data)) / (np.max(data) - np.min(data))
+
+
+# ============================================================
+# 5. ВИЗУАЛИЗАЦИЯ
+# ============================================================
+
+def plot_histogram(data) -&gt; None:
+    &quot;&quot;&quot;
+    Строит гистограмму распределения оценок по математике.
+
+    Args:
+        data (numpy.ndarray): Данные для гистограммы
+    &quot;&quot;&quot;
+    if data.ndim &gt; 1:
+        data = data.flatten()
+
+    plt.figure()
+    plt.hist(data, bins=20)
+    plt.title(&quot;Распределение оценок по математике&quot;)
+    plt.xlabel(&quot;Оценка&quot;)
+    plt.ylabel(&quot;Количество студентов&quot;)
+    plt.grid(True)
+
+    plt.savefig(&quot;/Users/monomraz/PycharmProjects/python_2/LR-2/plots/plot_histogram.png&quot;)
+    plt.close()
+
+
+def plot_heatmap(matrix) -&gt; None:
+    &quot;&quot;&quot;
+    Строит тепловую карту корреляции предметов.
+
+    Args:
+        matrix (numpy.ndarray): Матрица корреляции
+    &quot;&quot;&quot;
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(
+        matrix,
+        annot=True,
+        fmt=&quot;.2f&quot;,
+        cmap=&quot;coolwarm&quot;,
+        square=True
+    )
+    plt.title(&quot;Тепловая карта корреляции предметов&quot;)
+    plt.tight_layout()
+    plt.savefig(&quot;/Users/monomraz/PycharmProjects/python_2/LR-2/plots/plot_heatmap.png&quot;)
+    plt.close()
+
+
+def plot_line(x, y) -&gt; None:
+    &quot;&quot;&quot;
+    Строит график зависимости: студент -&gt; оценка по математике.
+
+    Args:
+        x (numpy.ndarray): Номера студентов
+        y (numpy.ndarray): Оценки студентов
+    &quot;&quot;&quot;
+    plt.figure()
+    plt.plot(x, y, marker=&quot;o&quot;)
+    plt.title(&quot;Зависимость оценки по математике от номера студента&quot;)
+    plt.xlabel(&quot;Номер студента&quot;)
+    plt.ylabel(&quot;Оценка по математике&quot;)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(&quot;/Users/monomraz/PycharmProjects/python_2/LR-2/plots/plot_line.png&quot;)
+    plt.close()
+</code></pre>
+<h3 id="_7">Визуализация</h3>
+<h2 id="_8">Гистограмма</h2>
+<p><img alt="Гистограмма" src="../../stylesheets/plot_histogram.png" /></p>
+<h2 id="_9">Тепловая карта корреляции</h2>
+<p><img alt="Тепловая карта" src="../../stylesheets/plot_heatmap.png" /></p>
+<h2 id="_10">Линейный график</h2>
+<p><img alt="Линейный график" src="../../stylesheets/plot_line.png" /></p>
+<h3 id="_11">Выводы</h3>
+<p>В ходе лабораторной работы были реализованы функции для выполнения численных вычислений и анализа данных с
+использованием <strong>NumPy</strong>. Освоены операции создания, преобразования и обработки массивов, векторные и матричные
+вычисления, статистический анализ и нормализация данных. Реализованы визуализации с сохранением результатов в <code>plots/</code>.
+Корректность функций подтверждена прохождением тестов <strong>pytest</strong>.</p>
 <p><a href="../../">← На главную</a></p></p>
     </article>
 </section>
