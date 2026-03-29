@@ -22,7 +22,9 @@ workflows:
               - cp -R source/site/. site/
           - name: publish-site
             script:
+              - git config user.name "sourcecraft-ci"
+              - git config user.email "sourcecraft-ci@local"
               - git checkout -b release
-              - git add site
+              - git add -f site
               - "git commit -m 'deploy: publish site'"
               - git push origin release -f
