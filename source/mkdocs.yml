@@ -22,6 +22,7 @@ nav:
       - Проект 3. CRUD-приложение с SQLite и MVC: projects/lab3.md
       - Проект 4. Основы NumPy массивы и векторные операции: projects/lab4.md
       - Проект 5. Классификация с применением Scikit-Learn: projects/lab5.md
+      - Проект 6. Регрессия с применением Scikit-Learn: projects/lab6.md
 
 plugins:
   - search
