@@ -122,5 +122,6 @@
 Следовательно, для данной задачи наиболее подходящими являются модели на основе деревьев решений и их ансамблей.
 
 - **Ссылка:** [GitHub репозиторий](https://github.com/carbyrator/python_2/tree/main/LR-4)
+- **Ссылка:** [Colab](https://colab.research.google.com/drive/1jt6mbCdRe329bZDYJ5LVIZev7sNjhLrW?usp=sharing)
 
 [← На главную](../../)
