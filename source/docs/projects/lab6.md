@@ -102,6 +102,6 @@
 Таким образом, для данной задачи наиболее эффективными оказались ансамблевые методы, особенно градиентный бустинг по деревьям.
 
 - **Ссылка:** [GitHub репозиторий](https://github.com/carbyrator/python_2/tree/main/LR-5)
-- **Ссылка:** [Colab](https://drive.google.com/file/d/1Y3Vidl8wI9WSaNVZmW1WTQM2keHy5rwu/view?usp=sharing)
+- **Ссылка:** [Colab](https://colab.research.google.com/drive/1Y3Vidl8wI9WSaNVZmW1WTQM2keHy5rwu)
 
 [← На главную](../../)
